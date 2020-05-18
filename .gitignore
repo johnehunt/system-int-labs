@@ -16,3 +16,11 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+/01-bookshop-rest/target/classes/com/jjh/
+/01-bookshop-rest/01-bookshop-rest.iml
+/02-microservice-shop/target/classes/
+/02-microservice-shop/02-microservice-shop.iml
+/02-microservices-books/target/classes/
+/02-microservices-register/02-microservices-register.iml
+/02-microservices-register/target/classes/
+*.class
