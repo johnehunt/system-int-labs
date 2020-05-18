@@ -29,3 +29,5 @@ bin-release/
 /04-jdbc/04-jdbc.iml
 /05-jpa/target/classes/META-INF/
 /05-jpa/05-jpa.iml
+/06-data-repository/target/classes/
+/06-data-repository/06-data-repository.iml
