@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
 @EnableEurekaServer
-@Configuration
 public class ServiceRegistrationServer {
 
     public static void main(String[] args) {
