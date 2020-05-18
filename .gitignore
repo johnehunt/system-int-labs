@@ -26,3 +26,4 @@ bin-release/
 *.class
 /03-graphql/target/classes/
 /03-graphql/03-graphql.iml
+/04-jdbc/04-jdbc.iml
