@@ -27,3 +27,5 @@ bin-release/
 /03-graphql/target/classes/
 /03-graphql/03-graphql.iml
 /04-jdbc/04-jdbc.iml
+/05-jpa/target/classes/META-INF/
+/05-jpa/05-jpa.iml
