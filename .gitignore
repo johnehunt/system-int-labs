@@ -24,3 +24,5 @@ bin-release/
 /02-microservices-register/02-microservices-register.iml
 /02-microservices-register/target/classes/
 *.class
+/03-graphql/target/classes/
+/03-graphql/03-graphql.iml
