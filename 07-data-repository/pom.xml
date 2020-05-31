@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>07-data-repository</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>data-repository</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>

@@ -12,6 +12,9 @@ bin-release/
 *.air
 *.ipa
 *.apk
+*.iml
+*.class
+/target
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
@@ -20,10 +23,9 @@ bin-release/
 /01-bookshop-rest/01-bookshop-rest.iml
 /02-microservice-shop/target/classes/
 /02-microservice-shop/02-microservice-shop.iml
-/02-microservices-books/target/classes/
+/02-books-microservice/target/classes/
 /02-microservices-register/02-microservices-register.iml
 /02-microservices-register/target/classes/
-*.class
 /03-graphql/target/classes/
 /03-graphql/03-graphql.iml
 /04-jdbc/04-jdbc.iml
@@ -31,3 +33,8 @@ bin-release/
 /05-jpa/05-jpa.iml
 /06-data-repository/target/classes/
 /06-data-repository/06-data-repository.iml
+/02-registry-service/target/classes/
+/02-shop-microservice/target/classes/
+/07-data-repository/target/classes/
+/07-data-repository/demo.iml
+/06-jpa/target/classes/META-INF/

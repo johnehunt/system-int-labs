@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jjh</groupId>
-    <artifactId>bookshop</artifactId>
+    <artifactId>05-jdbc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>students</name>
