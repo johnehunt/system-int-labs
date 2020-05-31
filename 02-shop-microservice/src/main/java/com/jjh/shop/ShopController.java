@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 public class ShopController {
 
-    private static final String USER_SERVICE_URL = "http://book-service";
+    private static final String BOOK_SERVICE_URL = "http://book-service";
 
     @Autowired
     @LoadBalanced
@@ -23,9 +23,9 @@ public class ShopController {
 
     @GetMapping
     public Map<String, List<Book>> getBooks() {
-        System.out.println("ShopService.getBooks()");
+        System.out.println("ShopController.getBooks()");
         Map<String, List<Book>> map = new HashMap<String, List<Book>>();
-        List<Book> results = (List<Book>) restTemplate.getForObject(USER_SERVICE_URL + "/bookshop/list", List.class);
+        List<Book> results = (List<Book>) restTemplate.getForObject(BOOK_SERVICE_URL + "/bookshop/list", List.class);
         map.put("Technical", results);
         return map;
     }
