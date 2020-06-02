@@ -38,3 +38,5 @@ bin-release/
 /07-data-repository/target/classes/
 /07-data-repository/demo.iml
 /06-jpa/target/classes/META-INF/
+/01-bookshop-rest/target/classes/META-INF/
+/02-book-domain/target/

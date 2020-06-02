@@ -11,7 +11,7 @@ public class BookDAO {
     private static final String pwd = "user123";
     private Connection conn;
 
-    public void setuo() {
+    public void setup() {
         try {
             conn = DriverManager.getConnection(url,user,pwd);
         } catch (SQLException e) {

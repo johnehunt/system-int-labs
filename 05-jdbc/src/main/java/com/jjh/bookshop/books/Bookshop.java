@@ -2,14 +2,13 @@ package com.jjh.bookshop.books;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Bookshop {
 
     private BookDAO dao = new BookDAO();
 
     public Bookshop() {
-        dao.setuo();
+        dao.setup();
     }
 
     public List<Book> getBooks() throws SQLException {
