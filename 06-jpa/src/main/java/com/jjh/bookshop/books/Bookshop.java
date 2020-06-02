@@ -8,7 +8,7 @@ public class Bookshop {
     private BookDAO dao = new BookDAO();
 
     public Bookshop() {
-        dao.setuo();
+        dao.setup();
     }
 
     public List<Book> getBooks() throws SQLException {

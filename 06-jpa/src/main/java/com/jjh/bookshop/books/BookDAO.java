@@ -10,7 +10,7 @@ public class BookDAO {
 
     private EntityManager em;
 
-    public void setuo() {
+    public void setup() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookshopJPA");
         em = emf.createEntityManager();
     }
@@ -28,11 +28,15 @@ public class BookDAO {
     }
 
     public void saveBook(Book book) {
+        em.getTransaction().begin();
         em.persist(book);
+        em.getTransaction().commit();
     }
 
     public void deleteBook(Book book) {
+        em.getTransaction().begin();
         em.remove(book);
+        em.getTransaction().commit();
     }
 
 }
