@@ -13,6 +13,7 @@ public class Bookshop {
     }
 
     private void setup() {
+        System.out.println("Starting setup");
         Address authorAddress = new Address(10, "High Street", "Any Town", "Somerset", "SA1 23Z");
         Author author = new Author("Pete Smith", authorAddress);
 

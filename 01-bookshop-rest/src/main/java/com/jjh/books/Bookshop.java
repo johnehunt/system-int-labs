@@ -46,7 +46,8 @@ public class Bookshop {
 
     public Book getBookByTitle(String title) {
         System.out.println("Bookshop.getBook(" + title + ")");
-        List<Book> books = this.books.stream().filter(b -> b.getTitle().equalsIgnoreCase(title))
+        List<Book> books = this.books.stream()
+                .filter(b -> b.getTitle().equalsIgnoreCase(title))
                 .collect(Collectors.toList());
         if (books.size() > 0)
             return books.get(0);
