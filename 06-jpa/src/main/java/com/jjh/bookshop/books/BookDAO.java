@@ -1,8 +1,6 @@
 package com.jjh.bookshop.books;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -11,8 +9,7 @@ public class BookDAO {
     private EntityManager em;
 
     public void setup() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookshopJPA");
-        em = emf.createEntityManager();
+        em = EntityManagerSingleton.getEntityManager();
     }
 
     public Book getBookByISBN(int isbn) {
