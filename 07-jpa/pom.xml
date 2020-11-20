@@ -7,11 +7,10 @@
 
 
     <groupId>com.jjh</groupId>
-    <artifactId>06-jpa</artifactId>
+    <artifactId>07-jpa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>students</name>
-    <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <properties>
