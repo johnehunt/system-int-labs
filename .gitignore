@@ -40,3 +40,4 @@ bin-release/
 /06-jpa/target/classes/META-INF/
 /01-bookshop-rest/target/classes/META-INF/
 /02-book-domain/target/
+/.idea/
