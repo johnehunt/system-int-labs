@@ -11,13 +11,18 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>07-data-repository</artifactId>
+    <artifactId>08-data-repository</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>08-data-repository</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
-        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
     </properties>
+
     <dependencies>
 
         <dependency>
@@ -29,13 +34,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
