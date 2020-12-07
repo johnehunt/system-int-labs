@@ -22,6 +22,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
+        <!-- Properties used for the Graph QL libraries -->
+        <graphiql.version>7.0.1</graphiql.version>
+        <graphiql.java.version>6.0.2</graphiql.java.version>
     </properties>
 
     <dependencies>
@@ -32,18 +35,18 @@
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>7.0.1</version>
+            <version>${graphiql.version}</version>
         </dependency>
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
-            <version>7.0.1</version>
+            <version>${graphiql.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphql-java-tools</artifactId>
-            <version>6.0.2</version>
+            <version>${graphiql.java.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -51,9 +54,8 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-
     <build>
-        <finalName>graphql-service</finalName>
+        <finalName>spring-graphql-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -61,4 +63,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
