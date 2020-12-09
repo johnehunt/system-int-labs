@@ -1,3 +1,4 @@
+# Can have comments in schemas
 type Book {
     isbn: ID!
     title: String!
@@ -7,5 +8,6 @@ type Book {
 
 type Query {
     books(count: Int): [Book]!
+    all_books: [Book] !
 }
 
