@@ -46,13 +46,22 @@ public class Bookshop {
 
     public Book getBookByTitle(String title) {
         System.out.println("Bookshop.getBook(" + title + ")");
-        List<Book> books = this.books.stream()
+
+        // Functional Style
+//        return  this.books.stream()
+//                .filter(b -> b.getTitle().equalsIgnoreCase(title))
+//                .findFirst()
+//                .orElse(null);
+
+        // More procedural style
+        List<Book> books =  this.books.stream()
                 .filter(b -> b.getTitle().equalsIgnoreCase(title))
                 .collect(Collectors.toList());
-        if (books.size() > 0)
+        if (books.isEmpty()) {
             return books.get(0);
-        else
+        } else {
             return null;
+        }
     }
 
     public void addBook(Book book) {
