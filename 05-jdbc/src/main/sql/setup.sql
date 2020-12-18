@@ -11,7 +11,7 @@ CREATE TABLE books (
 
 INSERT INTO `books` VALUES (1,'Java Unleased','Technical','Pete Smith'),
                            (2,'Advanced Java','Technical','Adam Cooke'),
-                           (3,'Shakespeares Plays','Drama','Gryff Moore'),
+                           (3,'Shakespeare\'s Plays','Drama','Gryff Moore'),
                            (4,'The History of Bath','Historical','Jasmine Jones');
 
 SELECT * FROM books WHERE category = 'Technical' ORDER BY title;
