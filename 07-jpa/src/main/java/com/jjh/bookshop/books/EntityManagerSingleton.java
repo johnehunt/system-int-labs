@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 public class EntityManagerSingleton {
     private static EntityManager em;
 
-    public static EntityManager getEntityManager() {
+    public static synchronized EntityManager getEntityManager() {
         if (em == null) {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookshopJPA");
             em = emf.createEntityManager();
