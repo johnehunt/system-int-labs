@@ -13,7 +13,7 @@ public class Bookshop {
 
     public List<Book> getBooks() throws SQLException {
         System.out.println("Bookshop.getBooks");
-        return dao.getAllBooks();
+        return dao.getBooks();
     }
 
     public int saveBook(Book book) throws SQLException {
@@ -22,11 +22,12 @@ public class Bookshop {
     }
 
     public void deleteBook(Book book) throws SQLException {
-        System.out.println("Bookshop.deleteBooks");
+        System.out.println("Bookshop.deleteBook()");
         dao.deleteBook(book);
     }
 
     public Book getBookByISBN(int isbn) throws SQLException {
+        System.out.println("Bookshop.getBookByISBN()");
         return dao.getBookByISBN(isbn);
     }
 }

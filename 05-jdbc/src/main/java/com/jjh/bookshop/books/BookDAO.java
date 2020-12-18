@@ -12,6 +12,7 @@ public class BookDAO {
     private Connection conn;
 
     public void setup() {
+        System.out.println("BookDAO.setup()");
         try {
             conn = DriverManager.getConnection(url,user,pwd);
         } catch (SQLException e) {
@@ -20,9 +21,12 @@ public class BookDAO {
     }
 
     public Book getBookByISBN(int isbn) throws SQLException {
+        System.out.printf("BookDAO.getBookByISBN(%s)\n", isbn);
         Book book = null;
+        String sql = String.format("SELECT * FROM books WHERE isbn = %d", isbn);
+        System.out.println(sql);
         Statement st = conn.createStatement();
-        ResultSet rs = st.executeQuery("SELECT * FROM books WHERE ISBN = " + isbn);
+        ResultSet rs = st.executeQuery(sql);
         if (rs.next()) {
             String title = rs.getString("title");
             String category = rs.getString("category");
@@ -32,11 +36,16 @@ public class BookDAO {
         return book;
     }
 
-    public List<Book> getAllBooks() throws SQLException {
+    public List<Book> getBooks() throws SQLException {
+
+        System.out.println("BookDAO.getBooks()");
         List<Book> books = new ArrayList<>();
 
+        String sql = "SELECT * FROM books";
+        System.out.println(sql);
+
         Statement st = conn.createStatement();
-        ResultSet rs = st.executeQuery("SELECT * FROM books");
+        ResultSet rs = st.executeQuery(sql);
 
         while (rs.next()) {
             int isbn = rs.getInt("isbn");
@@ -50,15 +59,26 @@ public class BookDAO {
     }
 
     public int saveBook(Book book) throws SQLException {
-        String sql = "INSERT INTO books (isbn, title, category, author) VALUES('";
-        sql = sql + book.getIsbn() + "', '" + book.getTitle() + "', '" + book.getCategory() + "', '" + book.getAuthor() + "')";
+        System.out.printf("BookDAO.saveBook(%s)\n", book);
+
+        String sql = String.format("INSERT INTO books (isbn, title, category, author) VALUES(%d, '%s', '%s', '%s')",
+                book.getIsbn(),
+                book.getTitle(),
+                book.getCategory(),
+                book.getAuthor());
+
         System.out.println(sql);
+
+//        String sql = "INSERT INTO books (isbn, title, category, author) VALUES('";
+//        sql = sql + book.getIsbn() + "', '" + book.getTitle() + "', '" + book.getCategory() + "', '" + book.getAuthor() + "')";
+//        System.out.println(sql);
         Statement st = conn.createStatement();
         return st.executeUpdate(sql);
     }
 
     public int deleteBook(Book book) throws SQLException {
-        String sql = "DELETE FROM books WHERE ISBN = '" + book.getIsbn() + "'";
+        System.out.printf("BookDAO.deleteBook(%s)\n", book);
+        String sql = "DELETE FROM books WHERE isbn = '" + book.getIsbn() + "'";
         System.out.println(sql);
         Statement st = conn.createStatement();
         return st.executeUpdate(sql);
