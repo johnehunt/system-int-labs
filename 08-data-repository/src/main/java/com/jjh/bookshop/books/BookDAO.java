@@ -16,6 +16,7 @@ public class BookDAO {
     }
 
     public Iterable<Book> getAllBooks() {
+        System.out.println("BookDAO.getAllBooks()");
         return repo.findAll();
     }
 
