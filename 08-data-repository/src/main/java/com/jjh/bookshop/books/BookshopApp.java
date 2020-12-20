@@ -14,7 +14,7 @@ public class BookshopApp {
         Bookshop bookshop = context.getBean(Bookshop.class);
         System.out.println(bookshop.getBooks());
 
-        Book b1 = bookshop.getBookByISBN(2).get();
+        Book b1 = bookshop.getBookByISBN(2);
         System.out.println(b1);
 
         Book b2 = new Book(7, "Java For Professionals", "Technical", "John Anders");
