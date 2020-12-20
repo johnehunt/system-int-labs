@@ -10,6 +10,7 @@ public class Book {
 
     @Id
     private int isbn;
+    // @Column(name="title", nullable=false, length=45)
     private String title;
     private String category;
     private String author;
