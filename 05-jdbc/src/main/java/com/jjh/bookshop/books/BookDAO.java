@@ -36,9 +36,9 @@ public class BookDAO {
         return book;
     }
 
-    public List<Book> getBooks() throws SQLException {
+    public List<Book> getAllBooks() throws SQLException {
 
-        System.out.println("BookDAO.getBooks()");
+        System.out.println("BookDAO.getAllBooks()");
         List<Book> books = new ArrayList<>();
 
         String sql = "SELECT * FROM books";

@@ -13,7 +13,7 @@ public class Bookshop {
 
     public List<Book> getBooks() throws SQLException {
         System.out.println("Bookshop.getBooks");
-        return dao.getBooks();
+        return dao.getAllBooks();
     }
 
     public int saveBook(Book book) throws SQLException {
