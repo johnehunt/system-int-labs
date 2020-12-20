@@ -61,7 +61,8 @@ public class BookDAO {
     public int saveBook(Book book) throws SQLException {
         System.out.printf("BookDAO.saveBook(%s)\n", book);
 
-        String sql = String.format("INSERT INTO books (isbn, title, category, author) VALUES(%d, '%s', '%s', '%s')",
+        String sql = String.format(
+                "INSERT INTO books (isbn, title, category, author) VALUES(%d, '%s', '%s', '%s')",
                 book.getIsbn(),
                 book.getTitle(),
                 book.getCategory(),
@@ -69,9 +70,6 @@ public class BookDAO {
 
         System.out.println(sql);
 
-//        String sql = "INSERT INTO books (isbn, title, category, author) VALUES('";
-//        sql = sql + book.getIsbn() + "', '" + book.getTitle() + "', '" + book.getCategory() + "', '" + book.getAuthor() + "')";
-//        System.out.println(sql);
         Statement st = conn.createStatement();
         return st.executeUpdate(sql);
     }
