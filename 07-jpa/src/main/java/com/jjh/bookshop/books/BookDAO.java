@@ -26,8 +26,8 @@ public class BookDAO {
         return book;
     }
 
-    public List<Book> getBooks() {
-        System.out.println("BookDAO.getBooks()");
+    public List<Book> getAllBooks() {
+        System.out.println("BookDAO.getAllBooks()");
         String jql = "SELECT b FROM Book b";
         System.out.println(jql);
         TypedQuery<Book> query = em.createQuery(jql, Book.class);
