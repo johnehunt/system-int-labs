@@ -1,6 +1,10 @@
 package com.jjh.bookshop.books;
 
-import java.sql.*;
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +13,7 @@ public class BookDAO {
     private static final String url = "jdbc:mysql://localhost/bookshop";
     private static final String user = "user";
     private static final String pwd = "user123";
+
     private Connection conn;
 
     public void setup() {
@@ -20,9 +25,19 @@ public class BookDAO {
         }
     }
 
+    public void shutdown() {
+        try {
+            conn.close();
+        } catch (SQLException exp) {
+            exp.printStackTrace();
+        }
+    }
+
     public Book getBookByISBN(int isbn) throws SQLException {
         System.out.printf("BookDAO.getBookByISBN(%s)\n", isbn);
         Book book = null;
+
+        // SELECT * FROM books WHERE isbn = 123;
         String sql = String.format("SELECT * FROM books WHERE isbn = %d", isbn);
         System.out.println(sql);
         Statement st = conn.createStatement();
@@ -33,6 +48,7 @@ public class BookDAO {
             String author = rs.getString("author");
             book = new Book(isbn, title, category, author);
         }
+        st.close();
         return book;
     }
 
@@ -71,7 +87,9 @@ public class BookDAO {
         System.out.println(sql);
 
         Statement st = conn.createStatement();
-        return st.executeUpdate(sql);
+        int result = st.executeUpdate(sql);
+        st.close();
+        return result;
     }
 
     public int deleteBook(Book book) throws SQLException {
@@ -79,7 +97,9 @@ public class BookDAO {
         String sql = "DELETE FROM books WHERE isbn = '" + book.getIsbn() + "'";
         System.out.println(sql);
         Statement st = conn.createStatement();
-        return st.executeUpdate(sql);
+        int result = st.executeUpdate(sql);
+        st.close();
+        return result;
     }
 
 

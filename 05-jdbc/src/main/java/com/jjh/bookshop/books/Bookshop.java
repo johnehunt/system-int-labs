@@ -11,6 +11,10 @@ public class Bookshop {
         dao.setup();
     }
 
+    public void shutdown() {
+        dao.shutdown();
+    }
+
     public List<Book> getBooks() throws SQLException {
         System.out.println("Bookshop.getBooks");
         return dao.getAllBooks();

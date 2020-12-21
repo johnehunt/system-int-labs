@@ -14,7 +14,7 @@ public class BookshopApp {
         System.out.println(b1);
         System.out.println(("------------------------\n"));
 
-        Book b2 = new Book(7, "Java For Professionals", "Technical", "John Anders");
+        Book b2 = new Book(5, "Java For Professionals", "Technical", "John Anders");
         bookshop.saveBook(b2);
         System.out.println(("------------------------\n"));
 
@@ -25,6 +25,8 @@ public class BookshopApp {
         System.out.println(("------------------------\n"));
 
         System.out.println(bookshop.getBooks());
+
+        bookshop.shutdown();
 
     }
 }
