@@ -33,8 +33,10 @@ public class BookDAO {
 
     public List<Book> getAllBooks() {
         System.out.println("BookDAO.getAllBooks()");
+        
         String jql = "SELECT b FROM Book b";
         System.out.println(jql);
+        // Query query2 = em.createNativeQuery("SELECT * FROM books", Book.class);
         TypedQuery<Book> query = em.createQuery(jql, Book.class);
         List<Book> results = query.getResultList();
         return results;
@@ -46,6 +48,10 @@ public class BookDAO {
         em.getTransaction().begin();
         em.persist(book);
         em.getTransaction().commit();
+    }
+
+    public void updateBook(Book book) {
+        saveBook(book);
     }
 
     public void deleteBook(Book book) {
