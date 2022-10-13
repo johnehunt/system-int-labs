@@ -3,8 +3,10 @@ package com.jjh.bookshop.books;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.jjh.bookshop", "com.jjh.service"})
 public class BookshopApp {
     public static void main(String [] args)  {
         System.out.println("Starting Bookshop setup");

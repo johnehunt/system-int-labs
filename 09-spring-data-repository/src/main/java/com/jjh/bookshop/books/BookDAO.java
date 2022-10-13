@@ -6,9 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BookDAO {
 
-    @Autowired
-    private BookRepository repo;
-
+    @Autowired private BookRepository repo;
 
     public Book getBookByISBN(int isbn) {
         System.out.printf("BookDAO.getBookByISBN(%s)\n", isbn);

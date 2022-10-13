@@ -14,7 +14,7 @@ public class Book {
     private String category;
     private String author;
 
-    public Book() {}
+    public Book() {}  // Required by JPA
 
     public Book(int isbn, String title, String category, String author) {
         this.isbn = isbn;
