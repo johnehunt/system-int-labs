@@ -15,8 +15,8 @@
             <property name="hibernate.archive.autodetection" value="class" />
             <property name="hibernate.connection.pool_size" value="10" />
             <!-- <property name="hibernate.connection.autocommit" value="true"/> -->
-            <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
             <!-- validate/create/update/create-drop -->
             <property name="hibernate.hbm2ddl.auto" value="update" />
         </properties>
