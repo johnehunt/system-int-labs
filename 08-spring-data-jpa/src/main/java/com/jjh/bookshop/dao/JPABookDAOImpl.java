@@ -1,6 +1,6 @@
-package com.jjh.bookstore.dao;
+package com.jjh.bookshop.dao;
 
-import com.jjh.bookstore.domain.Book;
+import com.jjh.bookshop.domain.Book;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;

@@ -1,4 +1,4 @@
-package com.jjh.bookstore.config;
+package com.jjh.bookshop.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

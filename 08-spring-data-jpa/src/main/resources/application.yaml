@@ -4,3 +4,7 @@ spring:
     password: user123
     username: user
     driver-class-name: "com.mysql.cj.jdbc.Driver"
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update

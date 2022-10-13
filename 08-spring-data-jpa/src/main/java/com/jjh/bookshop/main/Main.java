@@ -17,12 +17,6 @@ public class Main {
 
         System.out.println("Main - Server Started");
         System.out.println("\tSee - http://localhost:8080/books/list");
-        System.out.println("\tSee - http://localhost:8080/books/hello");
-        System.out.println("\tSee - http://localhost:8080/books/name");
-
-        System.out.println();
-        System.out.println("Main - REST api available");
-        System.out.println("\tSee - http://localhost:8080/api/books/list");
-        System.out.println("\tSee - http://localhost:8080/api/books/Java%20and%20Spring");
+        System.out.println("\tSee - http://localhost:8080/books/Java%20and%20Spring");
     }
 }

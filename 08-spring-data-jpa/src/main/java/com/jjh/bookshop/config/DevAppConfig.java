@@ -1,7 +1,5 @@
 package com.jjh.bookshop.config;
 
-import org.springframework.context.annotation.*;
-
 @Configuration
 @ComponentScan(basePackages = {
         "com.jjh.bookshop.dao",
