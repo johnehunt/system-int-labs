@@ -53,16 +53,13 @@ public class BookDAO {
     }
 
     public List<Book> getAllBooks() throws SQLException {
-
         System.out.println("BookDAO.getAllBooks()");
         List<Book> books = new ArrayList<>();
 
         String sql = "SELECT * FROM books";
         System.out.println(sql);
-
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery(sql);
-
         while (rs.next()) {
             int isbn = rs.getInt("isbn");
             String title = rs.getString("title");
@@ -70,7 +67,7 @@ public class BookDAO {
             String author = rs.getString("author");
             books.add(new Book(isbn, title, category, author));
         }
-
+        st.close();
         return books;
     }
 
@@ -85,7 +82,6 @@ public class BookDAO {
                 book.getAuthor());
 
         System.out.println(sql);
-
         Statement st = conn.createStatement();
         int result = st.executeUpdate(sql);
         st.close();
