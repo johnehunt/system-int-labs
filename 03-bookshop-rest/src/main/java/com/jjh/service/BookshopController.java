@@ -15,12 +15,14 @@ public class BookshopController {
     private Bookshop bookshop = new Bookshop();
 
     @GetMapping("{title}")
+    @ResponseStatus(HttpStatus.OK)
     public Book getBook(@PathVariable String title) {
         System.out.println("BookshopController.getBook(" + title + ")");
         return this.bookshop.getBookByTitle(title);
     }
 
     @GetMapping("list")
+    @ResponseStatus(HttpStatus.OK)
     public List<Book> getAllBooks() {
         System.out.println("BookshopController.getAllBooks()");
         return bookshop.getBooks();
@@ -49,6 +51,6 @@ public class BookshopController {
 
     @ExceptionHandler(BookException.class)
     @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Book not found")
-    public void updateFailure() { }
+    public void requestFailure() { }
 
 }
